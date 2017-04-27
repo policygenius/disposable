@@ -41,6 +41,11 @@ module Disposable
 
     private
       def create_accessors(model, methods)
+        puts "#########################################"
+        puts "MODEL: #{model}"
+        puts "METHODS: #{methods}"
+        puts "#########################################"
+
         def_instance_delegator "@#{model}", *methods # reader
         def_instance_delegator "@#{model}", *methods.map { |m| "#{m}=" } # writer
       end
