@@ -43,7 +43,10 @@ module Disposable
       def create_accessors(model, methods)
         puts "#########################################"
         puts "MODEL: #{model}"
+        puts model.inspect
+        puts "#########################################"
         puts "METHODS: #{methods}"
+        puts methods.inspect
         puts "#########################################"
 
         def_instance_delegator "@#{model}", *methods # reader
